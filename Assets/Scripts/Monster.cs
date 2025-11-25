@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    private Map belongingMap;
-    public int hp = 5;
+    public MonsterData data;
 
-    public void SetMap(Map map)
+    private int currentHp;
+
+    private void Start()
     {
-        belongingMap = map;
+        currentHp = data.maxHp;
     }
 
     public void TakeDamage(int dmg)
     {
-        hp -= dmg;
+        int finalDmg = Mathf.Max(1, dmg - data.defensePower);
 
-        if (hp <= 0)
-        {
+        currentHp -= finalDmg;
+
+        Debug.Log($"{data.monsterName} 피격: -{finalDmg}, 남은 체력 {currentHp}");
+
+        if (currentHp <= 0)
             Die();
-        }
     }
 
     private void Die()
     {
-        belongingMap.MonsterDied(this);
+        Debug.Log($"{data.monsterName} 사망!");
         Destroy(gameObject);
     }
 }

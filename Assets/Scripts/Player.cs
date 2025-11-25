@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // ÇÃ·¹ÀÌ¾î ¾Õ ¸ó½ºÅÍ °ø°İ
+            // í”Œë ˆì´ì–´ ì• ëª¬ìŠ¤í„° ê³µê²©
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 3f))
             {
                 if (hit.collider.TryGetComponent(out Monster m))

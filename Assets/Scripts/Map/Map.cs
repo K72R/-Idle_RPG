@@ -24,7 +24,7 @@ public class Map : MonoBehaviour
         {
             GameObject m = Instantiate(monsterPrefab, point.position, Quaternion.identity, this.transform);
             Monster monster = m.GetComponent<Monster>();
-            monster.SetMap(this);
+            //monster.SetMap(this);
 
             monsters.Add(monster);
         }
@@ -36,7 +36,7 @@ public class Map : MonoBehaviour
 
         if (monsters.Count == 0)
         {
-            Debug.Log("¸Ê Å¬¸®¾î! ´ÙÀ½ ¸ÊÀ¸·Î ÀÌµ¿");
+            Debug.Log("ë§µ í´ë¦¬ì–´! ë‹¤ìŒ ë§µìœ¼ë¡œ ì´ë™");
             MapManager.Instance.LoadNextMap();
         }
     }
