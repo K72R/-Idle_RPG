@@ -5,15 +5,17 @@ using UnityEngine;
 public class MonsterSpawner : MonoBehaviour
 {
     public GameObject monsterPrefab;
-    public MonsterData monsterData;
 
-    public void Spawn()
+    public IEnumerator SpawnStage(StageData data)
     {
-        GameObject mon = Instantiate(monsterPrefab, transform.position, Quaternion.identity);
+        foreach (var monsterData in data.monsterList)
+        {
+            GameObject obj = Instantiate(monsterPrefab, transform.position, Quaternion.identity);
 
-        Monster m = mon.GetComponent<Monster>();
-        m.data = monsterData;
+            Monster monster = obj.GetComponent<Monster>();
+            monster.data = monsterData;
 
-        Debug.Log($"{monsterData.monsterName} 스폰 완료!");
+            yield return new WaitForSeconds(data.spawnDelay);
+        }
     }
 }

@@ -146,6 +146,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   monsterPrefab: {fileID: 0}
+--- !u!1 &248080874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248080876}
+  - component: {fileID: 248080875}
+  m_Layer: 0
+  m_Name: MonsterMage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &248080875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248080874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d277cc262e7ae4945ad5043f26f7ee36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 0}
+  monsterData: {fileID: 0}
+--- !u!4 &248080876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248080874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.030483, y: -4.5769467, z: 49.791767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &622452866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1967162499275711373, guid: 30c65b9d613133e46ba3aea475b5b5c7, type: 3}
@@ -1774,11 +1820,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132147496189681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc6ae3e5735c8a459a2357007e12a4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd77ece8c686e7346891bd3cfb403a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  belongingMap: {fileID: 0}
-  hp: 5
+  data: {fileID: 0}
 --- !u!1 &919132147953143019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,11 +1850,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132147953143019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc6ae3e5735c8a459a2357007e12a4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd77ece8c686e7346891bd3cfb403a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  belongingMap: {fileID: 0}
-  hp: 5
+  data: {fileID: 0}
 --- !u!1 &919132148220949266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,11 +1880,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132148220949266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc6ae3e5735c8a459a2357007e12a4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd77ece8c686e7346891bd3cfb403a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  belongingMap: {fileID: 0}
-  hp: 5
+  data: {fileID: 0}
 --- !u!1 &919132148338726669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,11 +1985,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132149157786871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc6ae3e5735c8a459a2357007e12a4b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd77ece8c686e7346891bd3cfb403a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  belongingMap: {fileID: 0}
-  hp: 5
+  data: {fileID: 0}
 --- !u!137 &977575026467290928
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -9824,3 +9866,4 @@ SceneRoots:
   - {fileID: 543450651688162897}
   - {fileID: 543450652036473931}
   - {fileID: 543450653695979085}
+  - {fileID: 248080876}

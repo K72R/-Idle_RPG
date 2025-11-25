@@ -6,23 +6,35 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    private void Awake() => Instance = this;
 
-    [Header("기본 스탯")]
+    [Header("스탯")]
+    public int level = 1;
+    public int exp = 0;
+    public int expToNext = 100;
+
     public int maxHp = 100;
     public int currentHp = 100;
+
+    public int maxMp = 50;
+    public int currentMp = 50;
+
     public int attackPower = 10;
     public int defensePower = 5;
 
     public void Heal(int amount)
     {
-        currentHp += amount;
-        if (currentHp > maxHp)
-            currentHp = maxHp;
+        currentHp = Mathf.Min(currentHp + amount, maxHp);
+    }
 
-        Debug.Log($"체력 회복: +{amount}, 현재 체력: {currentHp}");
+    public void GainExp(int amount)
+    {
+        exp += amount;
+        if (exp >= expToNext)
+        {
+            exp -= expToNext;
+            level++;
+            expToNext += 50;
+        }
     }
 }
