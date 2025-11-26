@@ -15,6 +15,7 @@ public class ItemSlotUI : MonoBehaviour
     {
         item = slot.item;
         icon.sprite = item.icon;
+        icon.enabled = (item.icon != null);
         amountText.text = slot.amount.ToString();
     }
 
@@ -32,7 +33,9 @@ public class ItemSlotUI : MonoBehaviour
                 break;
 
             case ItemType.BuffItem:
+            case ItemType.Consumable:
                 PlayerBuffSystem.Instance.ApplyBuff(item);
+                InventoryManager.Instance.RemoveItem(item);
                 break;
         }
 

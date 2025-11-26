@@ -20,7 +20,19 @@ public class InventoryUI : MonoBehaviour
         foreach (var slot in InventoryManager.Instance.items)
         {
             GameObject obj = Instantiate(slotPrefab, slotParent);
-            obj.GetComponent<ItemSlotUI>().Setup(slot);
+            var ui = obj.GetComponent<ItemSlotUI>();
+            ui.Setup(slot);
         }
+
+        int emptyCount = InventoryManager.Instance.maxSlots - InventoryManager.Instance.items.Count;
+        for (int i = 0; i < emptyCount; i++)
+        {
+            Instantiate(slotPrefab, slotParent); // 아이템 없는 빈 슬롯
+        }
+    }
+
+    public void OnClickClose()
+    {
+        UIManager.Instance.ShowIdle();
     }
 }
