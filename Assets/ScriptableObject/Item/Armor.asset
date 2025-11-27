@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e296f362de498479a5ec31a661a5c0, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  itemType: 2
+  itemName: "\uCF69\uAC11\uC637"
+  description: "\uC544\uAE30\uC7A5\uC0AC \uC6B0\uD22C\uB9AC\uAC00 \uC785\uC740 \uCF69\uAC11\uC637\uC785\uB2C8\uB2E4"
+  icon: {fileID: 0}
+  healAmount: 0
+  attackPower: 0
+  defensePower: 30
+  duration: 0
+  attackPercent: 0
+  defensePercent: 0
+  itemGrade: 0
+  itemLevel: 0

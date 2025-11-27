@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b3d4da35cc6be643bc98284d6c688b5, type: 3}
-  m_Name: NewMonster
+  m_Name: SkeletonMage
   m_EditorClassIdentifier: 
-  monsterName: 
-  description: 
-  maxHp: 0
-  attackPower: 0
-  defensePower: 0
-  moveSpeed: 0
-  attackSpeed: 0
+  monsterName: "\uB9C8\uBC95\uC0AC \uC2A4\uCF08\uB808\uD1A4"
+  description: "\uB9C8\uBC95\uC0AC \uC2A4\uCF08\uB808\uD1A4\uC785\uB2C8\uB2E4\n\uACF5\uACA9\uC18D\uB3C4\uB294
+    \uB290\uB9AC\uC9C0\uB9CC \uD55C \uBC29\uC774 \uAC15\uB825\uD569\uB2C8\uB2E4"
+  maxHp: 80
+  attackPower: 70
+  defensePower: 20
+  moveSpeed: 3
+  attackSpeed: 0.3

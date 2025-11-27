@@ -33,6 +33,6 @@ public class InventoryUI : MonoBehaviour
 
     public void OnClickClose()
     {
-        UIManager.Instance.ShowIdle();
+        UIManager.Instance.ShowDefault();
     }
 }

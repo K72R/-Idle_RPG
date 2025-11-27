@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static StageSelectUI;
 
 public class StageManager : MonoBehaviour
 {
     public static StageManager Instance;
-    private void Awake() => Instance = this;
 
-    public MonsterSpawner spawner;
     public StageData currentStage;
+    public MonsterSpawner spawner;
 
-    public void StartStage(StageData data)
+    private void Awake()
     {
-        currentStage = data;
-        StartCoroutine(spawner.SpawnStage(data));
+        Instance = this;
     }
 
-    public void CompleteStage()
+    private void Start()
     {
-        int gold = currentStage.rewardTable.GetCoinReward();
-        CurrencyManager.Instance.AddGold(gold);
+        if (StageTransfer.selectedStage != null)
+        {
+            StartStage(StageTransfer.selectedStage);
+        }
+    }
 
-        ItemData reward = currentStage.rewardTable.GetRandomItem();
-        if (reward != null)
-            InventoryManager.Instance.AddItem(reward);
+    public void StartStage(StageData stage)
+    {
+        currentStage = stage;
+
+        if (spawner != null)
+        {
+            StartCoroutine(spawner.SpawnStage(stage));
+        }
+        else
+        {
+            Debug.LogError("연결 확인하자");
+        }
     }
 }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8a6c3f7dae806428af2d2d17c4a8c3, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  minCoin: 30
+  maxCoin: 50
+  rewardItems:
+  - item: {fileID: 11400000, guid: dc685e8980807f74392f94743df5c0bb, type: 2}
+    dropChance: 40
+  - item: {fileID: 11400000, guid: 7c70c3efcf74633449e0225216c8c05c, type: 2}
+    dropChance: 30
+  - item: {fileID: 11400000, guid: b0319e7918d973e45b987db537a4190d, type: 2}
+    dropChance: 30
+  - item: {fileID: 11400000, guid: e863fc12750848c46a9252dd30f6bf0a, type: 2}
+    dropChance: 20
+  - item: {fileID: 11400000, guid: db233fb9e484c234fbb000cac084e1d2, type: 2}
+    dropChance: 20
+  - item: {fileID: 11400000, guid: df7ef6427160f124cb836090d8ed960a, type: 2}
+    dropChance: 10
+  - item: {fileID: 11400000, guid: 3687e08f4b1f0614085e3cdf6cbf5e8d, type: 2}
+    dropChance: 10

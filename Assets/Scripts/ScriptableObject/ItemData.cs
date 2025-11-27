@@ -11,6 +11,14 @@ public enum ItemType
     Consumable
 }
 
+public enum ItemGradde
+{
+    Normal,
+    Rare,
+    Epic,
+    Legendary
+}
+
 [CreateAssetMenu(fileName = "NewItem", menuName = "RPG/Item")]
 public class ItemData : ScriptableObject
 {
@@ -31,6 +39,10 @@ public class ItemData : ScriptableObject
 
     [Header("버프/소모품 공통")]
     public float duration;          // 지속시간
-    public float attackPercent;     // 공격력 증가%
-    public float defensePercent;    // 방어력 증가%
+    public float attackPercent;
+    public float defensePercent;
+
+    [Header("아이템 등급")]
+    public ItemGradde itemGrade;
+    public int itemLevel;
 }

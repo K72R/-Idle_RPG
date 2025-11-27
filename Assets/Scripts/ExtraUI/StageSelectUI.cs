@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -9,14 +10,13 @@ public class StageSelectUI : MonoBehaviour
 {
     public StageData[] stages;
     public TMP_Text selectedStageNameText;
+
     private StageData selectedStage;
 
     private void Start()
     {
         if (stages.Length > 0)
-        {
             SelectStage(0);
-        }
     }
 
     public void SelectStage(int index)
@@ -31,7 +31,13 @@ public class StageSelectUI : MonoBehaviour
     {
         if (selectedStage == null) return;
 
-        StageManager.Instance.StartStage(selectedStage);
-        UIManager.Instance.ShowIdle();
+        StageTransfer.selectedStage = selectedStage;
+
+        SceneManager.LoadScene("IdleScene");
+    }
+
+    public static class StageTransfer
+    {
+        public static StageData selectedStage;
     }
 }

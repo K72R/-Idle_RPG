@@ -52,6 +52,6 @@ public class ShopUI : MonoBehaviour
 
     public void OnClickClose()
     {
-        UIManager.Instance.ShowLobby(); // 또는 Idle
+        UIManager.Instance.ShowDefault();
     }
 }

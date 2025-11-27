@@ -18,40 +18,22 @@ public class UIManager : MonoBehaviour
     public GameObject panelShop;
     public GameObject panelUpgrade;
 
-    public void ShowLobby()
+    [Header("Default Panel")]
+    public GameObject defaultPanel;
+
+    public void Show(GameObject panel)
     {
-        SetActivePanel(panelLobby);
+        if (panelLobby) panelLobby.SetActive(false);
+        if (panelIdle) panelIdle.SetActive(false);
+        if (panelInventory) panelInventory.SetActive(false);
+        if (panelShop) panelShop.SetActive(false);
+        if (panelUpgrade) panelUpgrade.SetActive(false);
+
+        panel?.SetActive(true);
     }
 
-    public void ShowIdle()
+    public void ShowDefault()
     {
-        SetActivePanel(panelIdle);
-    }
-
-    public void ShowInventory()
-    {
-        SetActivePanel(panelInventory);
-    }
-
-    public void ShowShop()
-    {
-        SetActivePanel(panelShop);
-    }
-
-    public void ShowUpgrade()
-    {
-        SetActivePanel(panelUpgrade);
-    }
-
-    private void SetActivePanel(GameObject target)
-    {
-        panelLobby.SetActive(false);
-        panelIdle.SetActive(false);
-        panelInventory.SetActive(false);
-        panelShop.SetActive(false);
-        panelUpgrade.SetActive(false);
-
-        if (target != null)
-            target.SetActive(true);
+        Show(defaultPanel);
     }
 }
