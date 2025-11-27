@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 6466760829012818812}
   - component: {fileID: 2711306776682473169}
   - component: {fileID: 6355247524503940178}
+  - component: {fileID: 5083574404768250334}
   m_Layer: 0
   m_Name: Skeleton_Mage
   m_TagString: Untagged
@@ -421,6 +422,29 @@ MonoBehaviour:
   moveSpeed: 1
   attackRange: 1.5
   attackInterval: 1
+--- !u!136 &5083574404768250334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600160960831922601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!1 &2624927211409878315
 GameObject:
   m_ObjectHideFlags: 0

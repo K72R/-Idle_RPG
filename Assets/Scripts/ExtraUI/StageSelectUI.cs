@@ -29,9 +29,9 @@ public class StageSelectUI : MonoBehaviour
 
     public void OnClickStart()
     {
-        if (selectedStage == null) return;
+        //if (selectedStage == null) return;
 
-        StageTransfer.selectedStage = selectedStage;
+        //StageTransfer.selectedStage = selectedStage;
 
         SceneManager.LoadScene("IdleScene");
     }

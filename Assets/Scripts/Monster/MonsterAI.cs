@@ -28,11 +28,7 @@ public class MonsterAI : MonoBehaviour
 
         if (distance > attackRange)
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                player.position,
-                moveSpeed * Time.deltaTime
-            );
+            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
         else
         {
